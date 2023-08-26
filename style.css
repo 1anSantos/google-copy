@@ -35,7 +35,7 @@ body {
 }
 .dark-theme main div.buttons>button:hover {
     outline: 1px solid #b3b3b391;
-    background-color: #282a2c;
+    box-shadow: 0 0 5px #000000;
 }
 .dark-theme #settings-board {
     background-color: #161618;
@@ -117,7 +117,7 @@ a:hover {
 .material-symbols-outlined.apps:hover,
 .material-symbols-outlined.user:hover,
 .material-symbols-outlined.notification:hover {
-    background-color: #7e7e7e60;
+    background-color: #7e7e7e50;
 }
 
 /* Settings */
@@ -159,7 +159,7 @@ div.search-area {
     align-items: center;
     width: 560px;
     height: 46px;
-    padding: 7px;
+    padding: 3px 10px;
     border-radius: 200px;
     outline: 1px solid #b3b3b385;
 }
@@ -183,7 +183,7 @@ div.search-area>.image {
 }
 div.search-area>div.keyboard,
 div.search-area>div.magnifying-glass {
-    padding-bottom: 5px;
+    margin-bottom: 6px;
     height: fit-content;
     color: #414141;
 }
@@ -205,7 +205,6 @@ main div.buttons>button {
     background-color: #ececec;
 }
 main div.buttons>button:hover {
-    box-shadow: 0 0 5px #000;
-    outline: 1px solid #3a3a3a;
-    background-color: #a3a3a3;
+    box-shadow: 0 0 4px #414141;
+    outline: 1px solid #929292;
 }
