@@ -1,3 +1,13 @@
+:root {
+    --text-color: #414141;
+    --background: #fff;
+    --settings-hr: #9A9A9A;
+}
+.dark-theme {
+    --text-color: #fff;
+    --settings-hr: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,17 +27,6 @@ body {
 /* Dark-Theme */
 .dark-theme {
     background-color: #202124;
-}
-.dark-theme a,
-.dark-theme #settings-board,
-.dark-theme div.search-area>input,
-.dark-theme main div.buttons>button,
-.dark-theme div.search-area>.keyboard,
-.dark-theme div.search-area>.magnifying-glass,
-.dark-theme .material-symbols-outlined.apps,
-.dark-theme .material-symbols-outlined.user,
-.dark-theme .material-symbols-outlined.notification { 
-    color: #fff;
 }
 .dark-theme div.search-area:hover,
 .dark-theme main div.buttons>button {
@@ -81,7 +80,7 @@ a {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    color: #414141;
+    color: var(--text-color);
     margin-left: 5px;
     margin-right: 5px;
     text-decoration-line: none;
@@ -104,7 +103,7 @@ a:hover {
 .material-symbols-outlined.apps,
 .material-symbols-outlined.user,
 .material-symbols-outlined.notification {
-    color: #414141;
+    color: var(--text-color);
     cursor: pointer;
     padding: 5px;
     transition: .2s;
@@ -122,6 +121,7 @@ a:hover {
 
 /* Settings */
 #settings-board {
+    color: var(--text-color);
     position: absolute;
     right: 35px;
     bottom: 48px;
@@ -141,16 +141,19 @@ a:hover {
     background-color: #d3d3d3;
 }
 #settings-board hr {
+    border: none;
+    height: 1px;
     margin: 5px 0 5px 0;
+    background-color: var(--settings-hr);
 }
 
 /* Main: Logo, Search bar & buttons */
-main .logo {
+main #logo {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin-bottom: 30px;
 }
-main .logo.perry img {
+main #logo.perry img {
     transform: translate(10%);
 }
 div.search-area {
@@ -185,7 +188,7 @@ div.search-area>div.keyboard,
 div.search-area>div.magnifying-glass {
     margin-bottom: 6px;
     height: fit-content;
-    color: #414141;
+    color: var(--text-color);
 }
 
 main div.buttons {

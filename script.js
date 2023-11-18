@@ -3,6 +3,7 @@ const body = document.body;
 const titlePage = document.querySelector("title");
 
 // ID
+const logo = document.querySelector("#logo img");
 const search = document.querySelector("#search");
 const settings = document.querySelector("#settings");
 const searchBTN = document.querySelector("#search-button");
@@ -10,7 +11,6 @@ const settingsBoard = document.querySelector("#settings-board");
 const imFeelingLucktBTN = document.querySelector("#im-feeling-lucky-button");
 
 // Class
-const logo = document.querySelector(".logo");
 const changeLogo = document.querySelector(".change-logo");
 const changeTheme = document.querySelector(".change-theme");
 const magnifyingGlass = document.querySelector("div.magnifying-glass");
@@ -32,16 +32,14 @@ changeTheme.addEventListener("click", () => {
 changeLogo.addEventListener("click", () => {
     logo.classList.toggle("perry");
     if (logo.classList.contains("perry")) {
-        logo.innerHTML = `
-        <img src="./img/perry-search.png" alt="image of perry the platypus">
-        `;
+        logo.src = "/img/perry-search-logo.png";
+        logo.alt = "image of perry the platypus searching";
         searchBTN.innerText = `Perry Search`;
         titlePage.innerHTML = `Google - Perry Search`;
     }
     else {
-        logo.innerHTML = `
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        `;
+        logo.src = "/img/google-logo-colorful.png";
+        logo.alt = "Google Logo";
         searchBTN.innerText = `Google Search`;
         titlePage.innerHTML = `Google`;
     }
