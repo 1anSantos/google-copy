@@ -34,14 +34,16 @@ changeLogo.addEventListener("click", () => {
     if (logo.classList.contains("perry")) {
         logo.src = "/img/perry-search-logo.png";
         logo.alt = "image of perry the platypus searching";
-        searchBTN.innerText = `Perry Search`;
         titlePage.innerHTML = `Google - Perry Search`;
+        imFeelingLucktBTN.innerText = `I'm Feeling Spy`;
+        searchBTN.innerText = `Perry Search`;
     }
     else {
         logo.src = "/img/google-logo-colorful.png";
         logo.alt = "Google Logo";
-        searchBTN.innerText = `Google Search`;
         titlePage.innerHTML = `Google`;
+        searchBTN.innerText = `Google Search`;
+        imFeelingLucktBTN.innerText = `I'm Feeling Lucky`;
     }
 });
 
