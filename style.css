@@ -13,6 +13,7 @@
     --icon-color-hover: #e8eaed14;
     --btn-color: #8ab4f8;
     --btn-color-hover: #93baf9;
+    --footer-color: #171717;
     --theme-icon: url("/img/moon.svg");
 }
 
@@ -95,7 +96,29 @@ main {
     flex-direction: column;
 }
 #search-area {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
+    height: 46px;
+    background-color: #171717;
+}
+#search-area div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 8px;
+}
+#search-area svg:not(#search-magnifying-glass) {
+    width: 24px;
+    height: 24px;
+}
+#search-magnifying-glass {
+    width: 20px;
+    height: 20px;
+}
+#search-area div:hover {
+    background-color: #ddd;
 }
 
 footer {
