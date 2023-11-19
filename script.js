@@ -8,10 +8,19 @@ const luckySearchBtn = document.querySelector('#lucky-search-btn');
 const magnifyingGlassBtn = document.querySelector("#search-magnifying-glass");
 
 //* Event Listeners 
-settings.addEventListener("click", sla);
+document.addEventListener('DOMContentLoaded', function () {
+    const savedDarkMode = localStorage.getItem('dark-theme');
+
+    if (savedDarkMode === 'true') {
+        logo.src = "/img/google-logo-white.png";
+        document.body.classList.add('dark-theme');
+    }
+});
+
+settings.addEventListener("click", toggleTheme);
 settings.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
-    sla();
+    toggleTheme();
 });
 
 magnifyingGlassBtn.addEventListener("click", () => {
@@ -33,14 +42,17 @@ luckySearchBtn.addEventListener("click", () => {
 
 
 //* Functions 
-function sla() {
+function toggleTheme() {
     body.classList.toggle("dark-theme");
-    if (body.classList.contains("dark-theme")) {
+    const isDarkMode = body.classList.contains("dark-theme")
+    
+    if (isDarkMode) {
         logo.src = "/img/google-logo-white.png";
     }
     else {
         logo.src = "/img/google-logo-colorful.png";
     }
+    localStorage.setItem('dark-theme', isDarkMode);
 }
 
 function searchOnGoogle(googleUrl) {
