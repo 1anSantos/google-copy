@@ -1,7 +1,7 @@
 //* Variables 
 const body = document.querySelector('body');
 const logo = document.querySelector('#logo');
-const settings = document.querySelector("#settings");
+const settingsBtn = document.querySelector("#settings-btn");
 const searchInput = document.querySelector("#search-input");
 const normalSearchBtn = document.querySelector('#normal-search-btn');
 const luckySearchBtn = document.querySelector('#lucky-search-btn');
@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-settings.addEventListener("click", toggleTheme);
-settings.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") return;
-    toggleTheme();
-});
+// settingsBtn.addEventListener("click", toggleTheme);
+// settingsBtn.addEventListener("keydown", (event) => {
+//     if (event.key !== "Enter") return;
+//     toggleTheme();
+// });
 
 magnifyingGlassBtn.addEventListener("click", () => {
     searchInput.focus();
@@ -47,10 +47,10 @@ function toggleTheme() {
     const isDarkMode = body.classList.contains("dark-theme")
     
     if (isDarkMode) {
-        logo.src = "/img/google-logo-white.png";
+        logo.src = "./img/google-logo-white.png";
     }
     else {
-        logo.src = "/img/google-logo-colorful.png";
+        logo.src = "./img/google-logo-colorful.png";
     }
     localStorage.setItem('dark-theme', isDarkMode);
 }
