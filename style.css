@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
     --background: #fff;
     --text-color: #212121;
@@ -44,6 +45,7 @@
     --svg-red: #7d7d7d;
 }
 
+/* ALl Tags, HTML & Body */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -63,6 +65,7 @@ body {
     background-color: var(--background);
 }
 
+/* Header & Footer */
 header,
 footer {
     display: flex;
@@ -84,14 +87,17 @@ footer div * {
 }
 
 header div>a,
-footer div>a {
+footer div>a,
+footer .link {
     cursor: pointer;
     color: var(--text-color);
     text-decoration: none;
 }
 
 header div>a:hover,
-footer div>a:hover {
+footer div>a:hover,
+footer .link:hover,
+#settings.active .link {
     text-decoration-line: underline;
 }
 
@@ -99,9 +105,14 @@ header {
     font-size: 14px;
 }
 
-footer a {
+footer a,
+footer .link {
     font-size: 16px;
     padding: 5.3px 7.5px;
+}
+
+footer {
+    background-color: var(--footer-color);
 }
 
 #apps {
@@ -222,8 +233,29 @@ main {
     height: 36px !important;
 }
 
-footer {
-    background-color: var(--footer-color);
+#settings {
+    position: relative;
+}
+
+#settings-board {
+    position: absolute;
+    bottom: calc(100% + .63em);
+    right: .3em;
+    width: 64px;
+    opacity: 0;
+    height: 64px;
+    pointer-events: none;
+    border-radius: 8px;
+    transform: translateY(15px);
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+    background-color: var(--background);
+    box-shadow: 2px 0 5px 3px var(--search-shadow);
+}
+
+#settings.active #settings-board {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 #theme-icon {
