@@ -1,5 +1,5 @@
 //* Variables 
-const body = document.querySelector('body');
+const body = document.body;
 const logo = document.querySelector('#logo');
 const settingsBtn = document.querySelector("#settings-btn");
 const changeLogoBtn = document.querySelector("#change-logo-btn");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedDarkMode = localStorage.getItem('dark-theme');
 
     if (savedDarkMode !== "true") return;
-    document.body.classList.add('dark-theme');
+    body.classList.add('dark-theme');
 });
 
 document.addEventListener("click", (event) => {
@@ -81,13 +81,6 @@ function changeLogo() {
 
 function toggleTheme() {
     body.classList.toggle("dark-theme");
-    const isDarkMode = body.classList.contains("dark-theme")
-    
-    if (isDarkMode) {
-        logo.src = "./img/google-logo-white.png";
-    }
-    else {
-        logo.src = "./img/google-logo-colorful.png";
-    }
+    const isDarkMode = body.classList.contains("dark-theme");
     localStorage.setItem('dark-theme', isDarkMode);
 }
