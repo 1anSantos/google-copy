@@ -9,6 +9,8 @@ Original Google Website: https://google.com
 
 A copy of the google website for educational purposes, made just to test my knowledge of HTML, CSS and JS.
 
+**WARNING:** There is no way to log in to this site, the "Sign In" button is only superficial and takes you to your own Google account but this does not affect this site in any way so much so that the sign in button does not disappear as it does not log in to yours actually counts.
+
 ### Changelog
 - All files changed/updated;
 - New settings menu, subject to change;
@@ -27,7 +29,7 @@ Site Original do Google: https://google.com
 
 Uma cópia do site do google para fins educacionais, feito apenas para testar o meu conhecimento de HTML, CSS e JS.
 
-**ALERTA:** Não tem como logar nesse site, a área de "Sign In" é apenas superficial e leva para sua própria conta do google mas isso não afeta em nada esse site tanto que o botão de sign in não desaparece pois ele não loga na sua conta de fato.
+**ALERTA:** Não tem como logar nesse site, o botão de "Sign In" é apenas superficial e leva para sua própria conta do google mas isso não afeta em nada esse site tanto que o botão de sign in não desaparece pois ele não loga na sua conta de fato.
 
 ### Registro de Alterações
 - Todos os arquivos foram alterados/atualizados;
