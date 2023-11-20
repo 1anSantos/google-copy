@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 (Not Found)!!</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --background: #fff;
+            --text-color: #212121;
+            --code-color: rgb(95, 95, 95);
+            --google-logo: url("./img/google-logo-colorful.png");
+            --robot-image: url("img/robot-blue.png");
+        }
+        .dark-theme {
+            --background: #202124;
+            --text-color: #e2e2e2;
+            --code-color: #bebebe;
+            --google-logo: url("./img/google-logo-white.png");
+            --robot-image: url("img/robot-white.png");
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text-color);
+            background-color: var(--background);
+            margin: 7% auto 0;
+            max-width: 635px;
+            min-height: 180px;
+            padding: 30px 0 15px;
+        }
+        #logo {
+            width: 145px;
+            margin-left: -3px;
+            content: var(--google-logo);
+        }
+        #details {
+            margin: 20px;
+            max-width: 413px;
+        }
+        p {
+            line-height: 25px;
+            margin: 11px 0 22px;
+            overflow: hidden;
+        }
+        ins {
+            text-decoration: none;
+            opacity: .6;
+        }
+        code {
+            color: var(--code-color);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #sad-robot {
+            width: 170px;
+            content: var(--robot-image);
+        }
+        body.dark-theme #sad-robot {
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div id="details">
+        <a href="/google-copy/">
+            <img id="logo" aria-label="Google"/>
+        </a>
+        <p><strong>404.</strong> <ins>That's an error.</ins></p>
+        <p>
+            The requested URL <code>/asdada/asdsad</code>
+            was not found on this server.
+            <ins>That’s all we know.</ins>
+        </p>
+    </div>
+    <div id="sad-robot" aria-label="Sad Robot" role="img"></div>
+
+    <script type="text/javascript">
+        // Variables
+        const body = document.body;
+        const codeTag = document.querySelector("code");
+
+        // URL
+        const url = window.location.href.split("/google-copy")[1];
+        codeTag.innerText = url;
+        // Dark Theme or Light Theme
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedDarkMode = localStorage.getItem('dark-theme');
+
+            if (savedDarkMode !== "true") return;
+            body.classList.add('dark-theme');
+        });
+    </script>
+</body>
+</html>
