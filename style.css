@@ -1,20 +1,23 @@
-/* CSS Variables */
+/*? CSS Variables */
 :root {
     --background: #fff;
     --text-color: #212121;
-    --apps-color-hover: #3c40431e;
+    --icon-color: #7a7a7a;
+    --app-icon-color: #5f5f5f;
     --btn-color: #f1f1f1;
     --btn-border: #9f9f9f;
+    --btn-hover: rgba(60, 64, 68, 0.118);
     --signin-color: #1a73e8;
     --signin-color-hover: #1b66c9;
     --search-text-color: #202124;
-    --search-icon-color: #7d7d7d;
-    --search-icon-hover: #ddd;
     --search-border-color: #dfe1e5;
     --search-background-hover: #fff;
-    --search-shadow: #20212447;
+    --search-shadow: rgba(31, 32, 35, 0.278);
     --footer-color: #f2f2f2;
-    --theme-icon: url("/img/sun.svg");
+
+    --google-logo: url("./img/google-logo-colorful.png");
+    --perry-logo: url("./img/perry-search-logo.png");
+    --theme-icon: url("./img/sun.svg");
 
     --svg-blue: #4285f4;
     --svg-green: #34a853;
@@ -25,19 +28,21 @@
 .dark-theme {
     --background: #202124;
     --text-color: #fff;
-    --apps-color-hover: #e8eaed14;
+    --icon-color: #7d7d7d;
+    --app-icon-color: #ddd;
     --btn-color: #303134;
     --btn-border: #5f6368;
+    --btn-hover: rgba(232, 234, 237, 0.123);
     --signin-color: #8ab4f8;
     --signin-color-hover: #93baf9;
     --search-text-color: #e8eaed;
-    --search-icon-color: #7d7d7d;
-    --search-icon-hover: #2a2a2a;
     --search-border-color: #5f6368;
     --search-background-hover: #303134;
     --search-shadow: #171717;
     --footer-color: #171717;
-    --theme-icon: url("/img/moon.svg");
+
+    --google-logo: url("./img/google-logo-white.png");
+    --theme-icon: url("./img/moon.svg");
 
     --svg-blue: #7d7d7d;
     --svg-green: #7d7d7d;
@@ -45,7 +50,7 @@
     --svg-red: #7d7d7d;
 }
 
-/* ALl Tags, HTML & Body */
+/*? ALl Tags, HTML & Body */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -65,7 +70,7 @@ body {
     background-color: var(--background);
 }
 
-/* Header & Footer */
+/*? Header & Footer */
 header,
 footer {
     display: flex;
@@ -74,15 +79,15 @@ footer {
     padding: 10px 20px;
 }
 
-header div,
-footer div {
+header>div,
+footer>div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header div *,
-footer div * {
+header>div *,
+footer>div * {
     margin: 0 7.5px;
 }
 
@@ -97,7 +102,7 @@ footer .link {
 header div>a:hover,
 footer div>a:hover,
 footer .link:hover,
-#settings.active .link {
+.dropdown.active .link[data-dropdown-btn] {
     text-decoration-line: underline;
 }
 
@@ -129,11 +134,12 @@ footer {
 
 #apps svg {
     margin: 0;
+    fill: var(--app-icon-color);
 }
 
 #apps:hover,
 #apps:focus {
-    background-color: var(--apps-color-hover);
+    background-color: var(--btn-hover);
 }
 
 #signin-btn {
@@ -154,6 +160,10 @@ main {
     flex-direction: column;
 }
 
+#logo {
+    content: var(--google-logo);
+}
+
 #search-area {
     cursor: pointer;
     overflow: hidden;
@@ -172,7 +182,7 @@ main {
     background-color: var(--search-background-hover);
 }
 
-.dark-theme #search-area:hover {
+body.dark-theme #search-area:hover {
     border-color: transparent;
 }
 
@@ -192,11 +202,7 @@ main {
 
 #search-area div:hover,
 #search-area div:focus {
-    background-color: var(--search-icon-hover);
-}
-
-#search-area svg {
-    fill: var(--search-icon-color)
+    background-color: var(--btn-hover);
 }
 
 #search-area div:not(#search-magnifying-glass) svg {
@@ -233,38 +239,55 @@ main {
     height: 36px !important;
 }
 
-#settings {
-    position: relative;
-}
-
 #settings-board {
-    position: absolute;
     bottom: calc(100% + .63em);
-    right: .3em;
-    width: 64px;
-    opacity: 0;
-    height: 64px;
-    pointer-events: none;
-    border-radius: 8px;
-    transform: translateY(15px);
-    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
-    background-color: var(--background);
-    box-shadow: 2px 0 5px 3px var(--search-shadow);
+    right: .5em;
+    padding: 7px 0 3px;
+    min-width: max-content;
 }
 
-#settings.active #settings-board {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+.dropdown-option-row {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.dropdown-option-row:hover {
+    text-decoration: none;
+    background-color: var(--btn-hover);
+}
+
+#settings-board hr {
+    border: none;
+    height: 2px;
+    margin: 5px 0;
+    opacity: .5;
+    background-color: #777;
 }
 
 #theme-icon {
+    width: 22px;
+    height: 22px;
+    opacity: .5;
     content: var(--theme-icon);
+    transition: opacity .15s ease-in-out;
 }
 
-/* General */
+body.dark-theme #theme-icon {
+    opacity: .2;
+}
+
+#change-theme-btn:hover #theme-icon {
+    opacity: 1;
+}
+
+/*? General */
 svg {
-    fill: var(--text-color);
+    fill: var(--icon-color);
 }
 
 .svg-blue { fill: var(--svg-blue) }
@@ -293,4 +316,27 @@ svg {
 .btn:focus {
     border: 1px solid var(--btn-border);
     text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    margin: 0;
+    border-radius: 8px;
+    pointer-events: none;
+    transform: translateY(15px);
+    background-color: var(--background);
+    box-shadow: 2px 0 5px 3px var(--search-shadow);
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.dropdown.active > .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
