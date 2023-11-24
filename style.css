@@ -6,6 +6,7 @@
     --app-icon-color: #5f5f5f;
     --btn-color: #f1f1f1;
     --btn-border: #9f9f9f;
+    --btn-text-color: #373737;
     --btn-hover: rgba(60, 64, 68, 0.118);
     --signin-color: #1a73e8;
     --signin-color-hover: #1b66c9;
@@ -18,7 +19,7 @@
     --google-logo: url("./img/google-logo-colorful.png");
     --perry-logo: url("./img/perry-search-logo.png");
     --theme-icon: url("./img/sun.svg");
-
+    
     --svg-blue: #4285f4;
     --svg-green: #34a853;
     --svg-yellow: #fbbc04;
@@ -32,6 +33,7 @@
     --app-icon-color: #ddd;
     --btn-color: #303134;
     --btn-border: #5f6368;
+    --btn-text-color: #ddd;
     --btn-hover: rgba(232, 234, 237, 0.123);
     --signin-color: #8ab4f8;
     --signin-color-hover: #93baf9;
@@ -64,6 +66,7 @@ body {
 }
 
 body {
+    overflow: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: Arial, Helvetica, sans-serif;
@@ -127,7 +130,6 @@ footer {
     justify-content: center;
     background-color: transparent;
     border: none;
-    outline: none;
     padding: 7px;
     border-radius: 50%;
 }
@@ -135,11 +137,23 @@ footer {
 #apps svg {
     margin: 0;
     fill: var(--app-icon-color);
+    pointer-events: none;
 }
 
 #apps:hover,
 #apps:focus {
     background-color: var(--btn-hover);
+}
+
+#apps-board {
+    top: 120%;
+    /* right: 25%; */
+    width: 370px;
+    height: 170px;
+}
+
+.dropdown:not(.active) #apps-board {
+    transform: translateY(-15px);
 }
 
 #signin-btn {
@@ -235,7 +249,7 @@ body.dark-theme #search-area:hover {
 
 .btn-search {
     padding: 0 16px !important;
-    min-width: 54px !important;
+    min-width: 140px !important;
     height: 36px !important;
 }
 
@@ -246,19 +260,8 @@ body.dark-theme #search-area:hover {
     min-width: max-content;
 }
 
-.dropdown-option-row {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 5px 15px;
-    margin: 0;
-}
-
-.dropdown-option-row:hover {
-    text-decoration: none;
-    background-color: var(--btn-hover);
+.dropdown:not(.active) #settings-board {
+    transform: translateY(15px);
 }
 
 #settings-board hr {
@@ -306,7 +309,7 @@ svg {
     line-height: 16px;
     border-radius: 4px;
     letter-spacing: .25px;
-    color: var(--text-color);
+    color: var(--btn-text-color);
     border: 1px solid transparent;
     background-color: var(--btn-color);
     border: 1px solid var(--btn-color);
@@ -329,7 +332,6 @@ svg {
     margin: 0;
     border-radius: 8px;
     pointer-events: none;
-    transform: translateY(15px);
     background-color: var(--background);
     box-shadow: 2px 0 5px 3px var(--search-shadow);
     transition: opacity .15s ease-in-out, transform .15s ease-in-out;
@@ -339,4 +341,19 @@ svg {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+}
+
+.dropdown-option-row {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 5px 15px;
+    margin: 0;
+}
+
+.dropdown-option-row:hover {
+    text-decoration: none;
+    background-color: var(--btn-hover);
 }
