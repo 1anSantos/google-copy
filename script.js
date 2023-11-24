@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("click", (event) => {
     const isDropdownBtn = event.target.matches("[data-dropdown-btn]");
-    if (!isDropdownBtn && event.target.closest("[data-dropdown]") != null) return;
+    if (!isDropdownBtn && (event.target.closest("[data-dropdown]") != null)) return;
 
     let currentDropdown;
 
