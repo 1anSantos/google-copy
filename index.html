@@ -19,11 +19,146 @@
             <a href="https://mail.google.com/">Gmail</a>
             <a href="https://www.google.com/imghp?hl=en">Images</a>
             <div class="dropdown" data-dropdown>
-                <button id="apps" aria-label="apps" data-dropdown-btn>
+                <div id="apps-btn" aria-label="apps" title="Google Apps" aria-label="Google Apps" role="button" tabindex="0" data-dropdown-btn>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z"/></svg>
-                </button>
+                </div>
 
                 <div id="apps-board" class="dropdown-menu">
+                    <div class="space-first"></div>
+                    <div id="apps-content">
+                        <div class="apps">
+                            <a class="app-card" href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app">
+                                <img src="https://lh3.googleusercontent.com/o9U8AvPuX9gkIYtYfNmH-_wBdTfOJ7jb0VwbLWWbERzml7oTPngODhKv2Br7A64=w64">
+                                <span class="app-text">account</span>
+                            </a>
+                            <a class="app-card" href="https://www.google.com/">
+                                <img src="https://lh3.googleusercontent.com/X7G-hd59XdxQgAu0Pg3jUf5LoAQQqSWjyKZSk0lvDBnRdboJB3f6rLhL9PSJLNy-ONa8vUba3hHAB3dmf35jpCuWWnabyN0BBDYYoXLZf1sMNPthFg=h40">
+                                <span class="app-text">search</span>
+                            </a>
+                            <a class="app-card" href="https://maps.google.com/">
+                                <img src="https://lh3.googleusercontent.com/9NuRdiRepVI3n1txfg7Ky2wWzB3DvXkWABXeFMSn2tzDYYkv8T_RMA9R17fWi0ziUDIDTVJx0JruCzOev37c4dkK9Wrgkeyam3pM8lI=h40">
+                                <span class="app-text">maps</span>
+                            </a>
+                            <a class="app-card" href="https://www.youtube.com/">
+                                <img src="https://lh3.googleusercontent.com/I95wjYii8vhFSSx-aSYdh2hPAMjgZkA9yjarSQoOd98COwOxkAVn_dulBcTcfbsa7Limy6IKX6G95ep6OB6y2yMLMiX0YEqFx3KQHQ=h40">
+                                <span class="app-text">youtube</span>
+                            </a>
+                            <a class="app-card" href="https://play.google.com/">
+                                <img src="https://lh3.googleusercontent.com/vWJNEFxN3WY5PYAYjwZ9ycEXMCCiB8EbcFXZxfSv5xkKLw67C2J5qXJTBL9KSPldWmLpVMnucrsDBmPlrf9tMiEJpYNZNcTw_ymlxgc=h40">
+                                <span class="app-text">play</span>
+                            </a>
+                            <a class="app-card" href="https://news.google.com/">
+                                <img src="https://lh3.googleusercontent.com/u2XGSr0jis3w5sLeuh8UMqGHgtdqPVPi77xYhPJdMO9C41wYUue3EKPJvwp-ovAlTzt3Ux3R4Mww2HlJ31UKre8vz1Cnno-3MxvWtA=h40">
+                                <span class="app-text">news</span>
+                            </a>
+                            <a class="app-card" href="https://mail.google.com/mail/">
+                                <img src="https://lh3.googleusercontent.com/mK6uPlO8TKCVSU8TsniV0pOUB0SSETbAPB_QUaaJ96qbBdZwaygmzf_bWRTIHmCNKgJ2hhn86KSfEAHvHN-P2EjFWAxPd77ob_2k8ew=h40">
+                                <span class="app-text">gmail</span>
+                            </a>
+                            <a class="app-card" href="https://meet.google.com/?hs=197">
+                                <img src="https://lh3.googleusercontent.com/5CsRqfMEP1Rv-PPv9G4962lyEuvb4roSLJHJQWPbmCa51AmvynfoGfoKsKiS87QhX07xQMZAeLp8qoSy7CjVZkXJ1WapQiJkroCeJw=h40">
+                                <span class="app-text">meet</span>
+                            </a>
+                            <a class="app-card" href="https://chat.google.com/">
+                                <img src="https://lh3.googleusercontent.com/z3dgQsXgGqfadzIUmpGI_ppolUy7H6fgqIbtW_qzLXcBww0nOby8TEE3e_fW84Qa7zeAwe339f5VLkqRD6jk7Z9sEaVh5Y_yaPG9nw=h40">
+                                <span class="app-text">chat</span>
+                            </a>
+                            <a class="app-card" href="https://contacts.google.com/">
+                                <img src="https://lh3.googleusercontent.com/uPpZapQO32gCKWztePKdTRzpg7rCr4_40vlgIAslU9JyF135ZdGvC33DbzA2mdmOTNK6qgbu7xWfKkR9rfJUwaK20saGLsFW9yw014GdOKBVEN9zow=h40">
+                                <span class="app-text">contacts</span>
+                            </a>
+                            <a class="app-card" href="https://drive.google.com/">
+                                <img src="https://lh3.googleusercontent.com/AGsg9hOAylBkWuFrfSgOt8psYWcr3b-vZcmIVk0ocwx7KAVSu--tg1ZIAUSL7nAbORTHI5eZaweHYVPMJu5ac8Xw7GP_WiCs1w60=h40">
+                                <span class="app-text">drive</span>
+                            </a>
+                            <a class="app-card" href="https://calendar.google.com/calendar">
+                                <img src="https://lh3.googleusercontent.com/DaaQa-Y-b3_IAhu6SBFb2vRl8PFR5iuCLwLszc16_OTlLrEFvFF9P4CS0ui-414nG9016ul3dQD1R3mHtmMx4P1bIA-zRXuPpFN4yw=h40">
+                                <span class="app-text">calendar</span>
+                            </a>
+                            <a class="app-card" href="https://translate.google.com/">
+                                <img src="https://www.gstatic.com/marketing-cms/df/f8/bb8f34744545a14b8a800ad7845a/translate-logo.webp">
+                                <span class="app-text">translate</span>
+                            </a>
+                            <a class="app-card" href="https://photos.google.com/">
+                                <img src="https://lh3.googleusercontent.com/RwVe2Cm1EjeDmYhdTzr179G0ovq_PCxgPzQ92PO-YxTBEFTHWh0L6Ev8FFDWRgRGrE81vwn95tyg9Ey189OO4kllhhpLAMIsGFZ-UKA=h40">
+                                <span class="app-text">photos</span>
+                            </a>
+                            <a class="app-card" href="https://www.google.com/shopping?source=ogv">
+                                <img src="https://lh3.googleusercontent.com/UqZcYFgfFclRU46MshhuCQD79idBZ8hyIe5WkQ1VLzG47w-Mgu6yGriGkL_YiYF2qau5jrufzTNwFp84tw7Lm-f9t2vQLkrECfur=h40">
+                                <span class="app-text">shopping</span>
+                            </a>
+                        </div>
+                        <div class="apps">
+                            <a class="app-card" href="https://www.google.com/finance">
+                                <img src="https://lh3.googleusercontent.com/v58NX5Yjsfo7e9kmvZYz-UpgxiBwecURTpNGU7dQ9CDZLnQaxf5dKsWQDUPxO91gZX-_BGEGd-HvLLXIjrzfOQw-NrQfqlxKLEFF1g=h40">
+                                <span class="app-text">finance</span>
+                            </a>
+                            <a class="app-card" href="https://docs.google.com/document/?usp=docs_alc">
+                                <img src="https://lh3.googleusercontent.com/Ac9zapU8rN332VMysmJIaTk1Nk-3IGzqCwFS-6PwDFUFpEzEBKPTGWfIFN4BXL3eHP5s1DJP2tyh8NTS8_LjvXHzpkyZC2fu58Ov=h40">
+                                <span class="app-text">docs</span>
+                            </a>
+                            <a class="app-card" href="https://docs.google.com/spreadsheets/?usp=sheets_alc">
+                                <img src="https://lh3.googleusercontent.com/tvQvvubDZ2r6Ou8zxkVzkIvddC1snCCq4xD4dhafjAJhHLDsEvHDEUms9RyVH_g-nI_8yTyeahZshZqwMV0NdHxD-K9v-Zbm4DF2vds=h40">
+                                <span class="app-text">sheets</span>
+                            </a>
+                            <a class="app-card" href="https://docs.google.com/presentation/?usp=slides_alc">
+                                <img src="https://lh3.googleusercontent.com/aD5GNhlaU2d70gmSy5ioL1dMSUZN9cHDWPLkIBLhCsJ-BgcGUm-PD6o8XExZcx1i2iZV6PH0P8v3ceg0x7Tzd_OZ5FV0nXs5mX15sgA=h40">
+                                <span class="app-text">slides</span>
+                            </a>
+                            <a class="app-card" href="https://books.google.com/">
+                                <img src="https://cdn.icon-icons.com/icons2/272/PNG/512/Play_Books_30007.png">
+                                <span class="app-text">books</span>
+                            </a>
+                            <a class="app-card" href="https://www.blogger.com/">
+                                <img src="https://lh3.googleusercontent.com/JtYUq9HfkkOryxudgp34oqI8qFu9a6mmL64OXjcDX7mfEwcX_pxmTdurvxssofY4swTY2c_M1Kk5o1a863CGTiBZkxxuYXfjiNgz=h40">
+                                <span class="app-text">blogger</span>
+                            </a>
+                            <a class="app-card" href="https://keep.google.com/">
+                                <img src="https://lh3.googleusercontent.com/9TzWtxtT-9Vrlwa8SXTSKhfl91Ndy4hU-1uLE9-hFsVSHARAOlFEdFExVR4QCegJ-KUBTSlJm3DZY6g31sbVrUT_HfxQvX_7WgLp=h40">
+                                <span class="app-text">keep</span>
+                            </a>
+                            <a class="app-card" href="https://jamboard.google.com/">
+                                <img src="https://www.gstatic.com/images/branding/product/1x/hh_jamboard_64dp.png">
+                                <span class="app-text">jamboard</span>
+                            </a>
+                            <a class="app-card" href="https://earth.google.com/web/">
+                                <img src="https://lh3.googleusercontent.com/HWgUyUNqdsifoczBOT-DYy-hV_ldW-cwWkz3tvlY0eQysaY1ra4D1bkfE-0BVFUlk5wComQdca8g-fwiPcOhdMHoMjqiiNh2TD2b=h40">
+                                <span class="app-text">earth</span>
+                            </a>
+                            <a class="app-card" href="https://www.google.com/save">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2899/2899445.png">
+                                <span class="app-text">saved</span>
+                            </a>
+                            <a class="app-card" href="https://artsandculture.google.com/?utm_source=ogs.google.com&utm_medium=referral">
+                                <img  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google_Arts_and_Culture_Logo.png">
+                                <span class="app-text">arts and culture</span>
+                            </a>
+                            <a class="app-card" href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons!o2">
+                                <img src="https://lh3.googleusercontent.com/mXJcrB99dv3D2R3626qv23yNzcp64hKW1n7cx78DQmybiBB-radVYvRguIs-lfQz1oYh72Oq_5Tk51U6fAqzzJb95vww5cyi79Wk0g=h40">
+                                <span class="app-text">google ads</span>
+                            </a>
+                            <a class="app-card" href="https://www.google.com/travel/?dest_src=al">
+                                <img src="https://cdn.worldvectorlogo.com/logos/google-travel.svg">
+                                <span class="app-text">travel</span>
+                            </a>
+                            <a class="app-card" href="https://docs.google.com/forms/">
+                                <img src="https://lh3.googleusercontent.com/p5lVJAicHuI6Ra6jtpYimNt53JZQNCcN06a-Q4fUaNVFo3cjVisZMY_UwBTg5fv2MUkrbwbfTw70N9-bbTfejp9S8rUNadIhWiqh=h40">
+                                <span class="app-text">forms</span>
+                            </a>
+                            <a class="app-card" href="https://store.google.com/?utm_source=app_launcher&utm_medium=google_oo&utm_campaign=GS107345">
+                                <img src="https://fonts.gstatic.com/s/i/productlogos/gstore/v5/web-64dp/logo_gstore_color_1x_web_64dp.png">
+                                <span class="app-text">google store</span>
+                            </a>
+                            <a class="app-card" href="https://chrome.google.com/webstore?utm_source=app-launcher">
+                                <img src="https://lh3.googleusercontent.com/osfLtqeBdEJUR4Rc-zmj4r5eqSd0GCJaB8wihnbgYfx_UBKhS1PMKwZlWXw6FqtjLktNqWJTcpDBMp5boZlSD2nkjeOloEA6VhJKlg=h40">
+                                <span class="app-text">chrome web store</span>
+                            </a>
+                        </div>
+                        <div class="space-last"></div>
+                        <a href="https://about.google/products/" id="more-from-google-btn" class="btn">
+                            More from Google
+                        </a>
+                    </div>
                 </div>
             </div>
             <a href="https://accounts.google.com/" id="signin-btn" class="btn" role="button">Sign in</a>
@@ -38,12 +173,13 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
             </div>
             
-            <input id="search-input" type="text" role="search">
+            <input id="search-input" type="text" aria-label="Search" role="search">
             
-            <div id="search-keyboard" role="button" tabindex="0">
+            <div id="search-keyboard" title="Virtual keyboard" aria-label="Virtual keyboard" role="button" tabindex="0">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="40"><path d="M142.666-180q-33.724 0-58.862-25.258Q58.667-230.517 58.667-264v-429.334q0-33.724 25.137-58.862 25.138-25.137 58.862-25.137h674.668q33.724 0 58.862 25.137 25.137 25.138 25.137 58.862V-264q0 33.483-25.137 58.742Q851.058-180 817.334-180H142.666Zm158.667-135.334h357.334V-390H301.333v74.666Zm-108.666-126h74.666V-516h-74.666v74.666Zm125.333 0h74.666V-516H318v74.666Zm124.667 0h74.666V-516h-74.666v74.666Zm125.333 0h74.666V-516H568v74.666Zm124.667 0h74.666V-516h-74.666v74.666Zm-500-126h74.666V-642h-74.666v74.666Zm125.333 0h74.666V-642H318v74.666Zm124.667 0h74.666V-642h-74.666v74.666Zm125.333 0h74.666V-642H568v74.666Zm124.667 0h74.666V-642h-74.666v74.666Z"/></svg>
+                <!-- <img height="14" src="https://www.gstatic.com/inputtools/images/tia.png"> -->
             </div>
-            <div id="search-microphone" role="button" tabindex="0">
+            <div id="search-microphone" title="Search by voice" aria-label="Search by voice" role="button" tabindex="0">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path class="svg-blue" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path>
                     <path class="svg-green" d="m11 18.08h2v3.92h-2z"></path>
@@ -51,7 +187,7 @@
                     <path class="svg-red" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"></path>
                 </svg>
             </div>
-            <div id="search-image" role="button" tabindex="0">
+            <div id="search-image" title="Search by image" aria-label="Search by image" role="button" tabindex="0">
                 <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
                     <rect fill="none" height="192" width="192"></rect>
                     <g>
@@ -68,15 +204,17 @@
             <button id="normal-search-btn" class="btn btn-search">Google Search</button>
             <button id="lucky-search-btn" class="btn btn-search">I'm Feeling Lucky</button>
         </div>
+        <p style="text-align: center; font-size: 14px; line-height: 24px;">Copy of website made for study purposes only.<br><strong>Google Original Website: <a href="https://google.com">https://google.com</a></strong></p>
     </main>
 
 
     <footer>
-        <div class="side">
+        <div>
             <a href="https://ads.google.com/">Advertising</a>
             <a href="https://smallbusiness.withgoogle.com/">Business</a>
+            <a href="https://www.google.com/search/howsearchworks/">How Search Works</a>
         </div>
-        <div class="side">
+        <div>
             <a href="https://policies.google.com/privacy">Privacy</a>
             <a href="https://policies.google.com/terms">Terms</a>
             
@@ -85,9 +223,15 @@
                     Settings
                 </div>
                 <div id="settings-board" class="dropdown-menu">
-                    <a class="dropdown-option-row" href="https://www.google.com/advanced_search">
-                        Advanced Search
+                    <a class="dropdown-option-row" href="https://www.google.com/preferences">
+                        Search settigns
                     </a>
+                    <a class="dropdown-option-row" href="https://www.google.com/advanced_search">
+                        Advanced search
+                    </a>
+                    <div id="all-my-fellas-btn" class="dropdown-option-row">
+                        All my Fellas
+                    </div>
                     <div id="change-logo-btn" class="dropdown-option-row">
                         Change Logo
                     </div>
@@ -99,5 +243,8 @@
             </div>
         </div>
     </footer>
+    <div id="all-my-fellas-video">
+        <iframe width="647" height="378" src="https://www.youtube-nocookie.com/embed/DC5WIRdqQKY?si=6516gbKfqiAcFfot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 </body>
 </html>

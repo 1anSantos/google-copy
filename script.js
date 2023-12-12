@@ -1,13 +1,16 @@
 //* Variables 
 const body = document.body;
 const logo = document.querySelector('#logo');
-const settingsBtn = document.querySelector("#settings-btn");
-const changeLogoBtn = document.querySelector("#change-logo-btn");
-const changeThemeBtn = document.querySelector("#change-theme-btn");
-const searchInput = document.querySelector("#search-input");
+const settingsBtn = document.querySelector('#settings-btn');
+const changeLogoBtn = document.querySelector('#change-logo-btn');
+const changeThemeBtn = document.querySelector('#change-theme-btn');
+const searchInput = document.querySelector('#search-input');
 const normalSearchBtn = document.querySelector('#normal-search-btn');
 const luckySearchBtn = document.querySelector('#lucky-search-btn');
-const magnifyingGlassBtn = document.querySelector("#search-magnifying-glass");
+const magnifyingGlassBtn = document.querySelector('#search-magnifying-glass');
+
+const allMyFellasBtn = document.querySelector('#all-my-fellas-btn');
+const allMyFellasVideo = document.querySelector('#all-my-fellas-video');
 
 //* Event Listeners 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,20 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("click", (event) => {
-    const isDropdownBtn = event.target.matches("[data-dropdown-btn]");
-    if (!isDropdownBtn && (event.target.closest("[data-dropdown]") != null)) return;
-
-    let currentDropdown;
-
-    if (isDropdownBtn) {
-        currentDropdown = event.target.closest("[data-dropdown]");
-        currentDropdown.classList.toggle("active");
-    }
-
-    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
-        if (dropdown === currentDropdown) return;
-        dropdown.classList.remove("active");
-    });
+    dropdown(event);
+});
+document.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    dropdown(event);
 });
 
 changeThemeBtn.addEventListener("click", toggleTheme);
@@ -44,6 +38,16 @@ changeLogoBtn.addEventListener("click", changeLogo);
 changeLogoBtn.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
     changeLogo();
+});
+
+allMyFellasBtn.addEventListener("click", allMyFellasMeme);
+allMyFellasBtn.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    allMyFellasMeme()
+});
+
+allMyFellasVideo.addEventListener("click", () => {
+    allMyFellasVideo.style.display = "none";
 });
 
 magnifyingGlassBtn.addEventListener("click", () => {
@@ -83,4 +87,28 @@ function toggleTheme() {
     body.classList.toggle("dark-theme");
     const isDarkMode = body.classList.contains("dark-theme");
     localStorage.setItem('dark-theme', isDarkMode);
+}
+
+function allMyFellasMeme() {
+    allMyFellasVideo.style.display = "flex";
+    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+        dropdown.classList.remove("active");
+    });
+}
+
+function dropdown(event) {
+    const isDropdownBtn = event.target.matches("[data-dropdown-btn]");
+    if (!isDropdownBtn && (event.target.closest("[data-dropdown]") != null)) return;
+
+    let currentDropdown;
+
+    if (isDropdownBtn) {
+        currentDropdown = event.target.closest("[data-dropdown]");
+        currentDropdown.classList.toggle("active");
+    }
+
+    document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+        if (dropdown === currentDropdown) return;
+        dropdown.classList.remove("active");
+    });
 }
